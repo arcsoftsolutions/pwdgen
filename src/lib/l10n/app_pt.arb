@@ -1,0 +1,10 @@
+{
+  "password_empty_text": "Gere uma senha",
+  "uppercase_checkbox_title": "Maiúsculas",
+  "lowercase_checkbox_title": "Minúsculas",
+  "symbols_checkbox_title": "Símbolos",
+  "numbers_checkbox_title": "Números",
+  "generate_button_label": "Gerar",
+  "copy_button_label": "Copiar",
+  "copy_success_message": "Copiado com sucesso!"
+}

@@ -1,0 +1,42 @@
+name: pwdgen
+description: "Password generator."
+publish_to: 'none'
+version: 0.0.1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_native_splash: ^2.3.13
+  flutter_launcher_icons: ^0.13.1
+  mocktail: ^1.0.3
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/launcher_icon.png"
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splash_screen.png
+  android_12:
+    color: "#ffffff"
+    icon_background_color: "#ffffff"
+    image: assets/splash_screen.png

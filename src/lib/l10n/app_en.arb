@@ -1,0 +1,10 @@
+{
+  "password_empty_text": "Generate a password",
+  "uppercase_checkbox_title": "Uppercase",
+  "lowercase_checkbox_title": "Lowercase",
+  "symbols_checkbox_title": "Symbols",
+  "numbers_checkbox_title": "Numbers",
+  "generate_button_label": "Generate",
+  "copy_button_label": "Copy",
+  "copy_success_message": "Copied successfully!"
+}

@@ -1,0 +1,13 @@
+<svg width="1152" height="1152" version="1.1" viewBox="0 0 304.8 304.8" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(.93749 0 0 .93749 -5.8104 -6.827)">
+<g transform="matrix(.62089 0 0 .62089 63.979 66.132)" fill="#006a60">
+<g transform="translate(52.4)">
+<path transform="matrix(.26458 0 0 .26458 16.358 30.672)" d="m0 396.32v510.24h755.91v-510.24zm261.44 151.71h226.77v132.28h-57.477v94.488h-113.38v-94.488h-55.91z" stroke-width="1.3301"/>
+<rect x="31.358" y="30.672" width="45" height="90" stroke-width=".3515"/>
+<rect transform="rotate(-90)" x="-75.672" y="91.358" width="45" height="50" stroke-width=".262"/>
+<rect x="156.36" y="30.672" width="45" height="90" stroke-width=".3515"/>
+</g>
+<text x="111.23617" y="303.0903" font-family="'Segoe UI'" font-size="25.4px" stroke-width=".26458" style="line-height:1.25" xml:space="preserve"><tspan x="111.23617" y="303.0903" fill="#006a60" font-family="'Segoe UI'" font-size="25.4px" font-weight="bold" stroke-width=".26458">PWD Gen</tspan></text>
+</g>
+</g>
+</svg>
