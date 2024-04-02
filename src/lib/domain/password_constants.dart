@@ -1,0 +1,3 @@
+const int DEFAULT_PASSWORD_LENGTH = 12;
+const int MIN_PASSWORD_LENGTH = 1;
+const int MAX_PASSWORD_LENGTH = 50;

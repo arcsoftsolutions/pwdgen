@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pwdgen/domain/character_set.dart';
+import 'package:pwdgen/domain/password_component_collection.dart';
+import 'package:pwdgen/domain/password_components.dart';
 import 'package:pwdgen/domain/password_generator.dart';
 
 void main() {
@@ -12,14 +13,17 @@ void main() {
 
     test('should have the default property values', () {
       expect(generator.length, 12);
-      expect(generator.characters.length, 3);
-      expect(generator.characters.contains(CharacterSet.uppercase), true);
-      expect(generator.characters.contains(CharacterSet.lowercase), true);
-      expect(generator.characters.contains(CharacterSet.numbers), true);
+      expect(generator.components.length, 3);
+
+      final PasswordComponentCollection components = generator.components;
+      expect(components.contains(PasswordComponents.uppercase), true);
+      expect(components.contains(PasswordComponents.lowercase), true);
+      expect(components.contains(PasswordComponents.numbers), true);
     });
 
-    test('should throw a StateError when no character set is specified', () {
-      generator.characters.clear();
+    test('should throw a StateError when no password component is specified',
+        () {
+      generator.components.clear();
       expect(
         () => generator.generate(),
         throwsA(const TypeMatcher<StateError>()),
@@ -40,31 +44,43 @@ void main() {
     });
 
     test('should generate a password with numbers only', () {
-      generator.characters.clear();
-      generator.characters.add(CharacterSet.numbers);
+      generator.components.clear();
+      generator.components.add(PasswordComponents.numbers);
       final String password = generator.generate();
-      expect(CharacterSet.numbers.match(password), true);
+      final RegExp pattern = RegExp(r'^[0-9]+$');
+      expect(pattern.hasMatch(password), true);
     });
 
     test('should generate a password with lowercase only', () {
-      generator.characters.clear();
-      generator.characters.add(CharacterSet.lowercase);
+      generator.components.clear();
+      generator.components.add(PasswordComponents.lowercase);
       final String password = generator.generate();
-      expect(CharacterSet.lowercase.match(password), true);
+      final RegExp pattern = RegExp(r'^[a-z]+$');
+      expect(pattern.hasMatch(password), true);
     });
 
     test('should generate a password with uppercase only', () {
-      generator.characters.clear();
-      generator.characters.add(CharacterSet.uppercase);
+      generator.components.clear();
+      generator.components.add(PasswordComponents.uppercase);
       final String password = generator.generate();
-      expect(CharacterSet.uppercase.match(password), true);
+      final RegExp pattern = RegExp(r'^[A-Z]+$');
+      expect(pattern.hasMatch(password), true);
     });
 
     test('should generate a password with symbols only', () {
-      generator.characters.clear();
-      generator.characters.add(CharacterSet.symbols);
+      generator.components.clear();
+      generator.components.add(PasswordComponents.symbols);
       final String password = generator.generate();
-      expect(CharacterSet.symbols.match(password), true);
+      final RegExp pattern = RegExp(r'^[*!@#$%&]+$');
+      expect(pattern.hasMatch(password), true);
+    });
+
+    test('should generate a password with words only', () {
+      generator.components.clear();
+      generator.components.add(PasswordComponents.words);
+      final String password = generator.generate();
+      final RegExp pattern = RegExp(r'^[A-z]+$');
+      expect(pattern.hasMatch(password), true);
     });
   });
 }
