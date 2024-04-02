@@ -15,6 +15,8 @@ PWD Gen generates secure passwords of specified length and settings.
 <p align='center'>
     <img src="screenshots/preview1.jpg" width="19%"/>
     <img src="screenshots/preview2.jpg" width="19%"/>
+    <img src="screenshots/preview3.jpg" width="19%"/>
+    <img src="screenshots/preview4.jpg" width="19%"/>
 </p>
 
 ## Privacy Policy

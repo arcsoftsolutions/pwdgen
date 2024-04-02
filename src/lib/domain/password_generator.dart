@@ -1,17 +1,19 @@
 import 'dart:math';
 
-import 'character_set.dart';
-import 'character_set_collection.dart';
+import 'password_component.dart';
+import 'password_component_collection.dart';
+import 'password_components.dart';
+import 'password_constants.dart';
 
 class PasswordGenerator {
   PasswordGenerator() {
-    characters.add(CharacterSet.uppercase);
-    characters.add(CharacterSet.lowercase);
-    characters.add(CharacterSet.numbers);
+    components.add(PasswordComponents.uppercase);
+    components.add(PasswordComponents.lowercase);
+    components.add(PasswordComponents.numbers);
   }
 
-  int length = 12;
-  final CharacterSetCollection characters = CharacterSetCollection();
+  int length = DEFAULT_PASSWORD_LENGTH;
+  final PasswordComponentCollection components = PasswordComponentCollection();
 
   String generate() {
     _validate();
@@ -19,11 +21,11 @@ class PasswordGenerator {
   }
 
   void _validate() {
-    if (characters.isEmpty) {
-      throw StateError('No character set was specified.');
+    if (components.isEmpty) {
+      throw StateError('No password component was specified.');
     }
-    if (length < 1 || length > 50) {
-      throw RangeError.range(length, 1, 50);
+    if (length < MIN_PASSWORD_LENGTH || length > MAX_PASSWORD_LENGTH) {
+      throw RangeError.range(length, MIN_PASSWORD_LENGTH, MAX_PASSWORD_LENGTH);
     }
   }
 
@@ -32,10 +34,14 @@ class PasswordGenerator {
     final Random random = Random();
 
     while (password.length < length) {
-      final int characterSetIndex = random.nextInt(characters.length);
-      final CharacterSet characterSet = characters.get(characterSetIndex);
-      final int characterIndex = random.nextInt(characterSet.length);
-      password += characterSet.get(characterIndex);
+      final int componentIndex = random.nextInt(components.length);
+      final PasswordComponent component = components.get(componentIndex);
+      final int elementIndex = random.nextInt(component.length);
+      password += component.get(elementIndex);
+    }
+
+    if (password.length > length) {
+      password = password.substring(0, length);
     }
 
     return password;

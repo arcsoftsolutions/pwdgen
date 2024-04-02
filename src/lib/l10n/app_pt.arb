@@ -1,10 +1,14 @@
 {
-  "password_empty_text": "Gere uma senha",
-  "uppercase_checkbox_title": "Maiúsculas",
-  "lowercase_checkbox_title": "Minúsculas",
-  "symbols_checkbox_title": "Símbolos",
-  "numbers_checkbox_title": "Números",
-  "generate_button_label": "Gerar",
-  "copy_button_label": "Copiar",
-  "copy_success_message": "Copiado com sucesso!"
+  "generate_page_title": "Gerar",
+  "history_page_title": "Histórico",
+  "password_title": "SENHA GERADA",
+  "settings_title": "CONFIGURAÇÕES",
+  "length_title": "COMPRIMENTO",
+  "uppercase_switch_title": "Letras maiúsculas (ex. ABC)",
+  "lowercase_switch_title": "Letras minúsculas (ex. abc)",
+  "numbers_switch_title": "Números (ex. 123)",
+  "symbols_switch_title": "Símbolos (ex. !@#$)",
+  "words_switch_title": "Palavras (ex. Banana)",
+  "generate_button_label": "GERAR SENHA",
+  "no_password_message": "Nenhuma senha encontrada"
 }

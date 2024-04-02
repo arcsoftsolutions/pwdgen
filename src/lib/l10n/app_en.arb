@@ -1,10 +1,14 @@
 {
-  "password_empty_text": "Generate a password",
-  "uppercase_checkbox_title": "Uppercase",
-  "lowercase_checkbox_title": "Lowercase",
-  "symbols_checkbox_title": "Symbols",
-  "numbers_checkbox_title": "Numbers",
-  "generate_button_label": "Generate",
-  "copy_button_label": "Copy",
-  "copy_success_message": "Copied successfully!"
+  "generate_page_title": "Generate",
+  "history_page_title": "History",
+  "password_title": "PASSWORD GENERATED",
+  "settings_title": "SETTINGS",
+  "length_title": "LENGTH",
+  "uppercase_switch_title": "Uppercase (eg. ABC)",
+  "lowercase_switch_title": "Lowercase (eg. abc)",
+  "numbers_switch_title": "Numbers (eg. 123)",
+  "symbols_switch_title": "Symbols (eg. !@#$)",
+  "words_switch_title": "Words (eg. Banana)",
+  "generate_button_label": "GENERATE PASSWORD",
+  "no_password_message": "No password found"
 }
