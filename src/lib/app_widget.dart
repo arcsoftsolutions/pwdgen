@@ -27,7 +27,7 @@ class AppWidget extends StatelessWidget {
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: ButtonStyle(
-          shape: MaterialStateProperty.all(
+          shape: WidgetStateProperty.all(
             const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(4.0)),
             ),

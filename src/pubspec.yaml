@@ -1,7 +1,7 @@
 name: pwdgen
 description: 'Password generator.'
 publish_to: 'none'
-version: 0.0.2+3
+version: 0.0.3+4
 
 environment:
   sdk: '>=3.3.1 <4.0.0'
@@ -19,7 +19,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
   flutter_launcher_icons: ^0.13.1
   mocktail: ^1.0.3
 
