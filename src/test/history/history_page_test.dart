@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:pwdgen/domain/password_model.dart';
@@ -8,6 +7,7 @@ import 'package:pwdgen/history/history_page.dart';
 import 'package:pwdgen/history/history_presenter.dart';
 import 'package:pwdgen/history/history_view_model.dart';
 import 'package:pwdgen/history/password_view_model.dart';
+import 'package:pwdgen/l10n/app_localizations.dart';
 import 'package:pwdgen/services/service_collection.dart';
 import 'package:pwdgen/services/service_locator.dart';
 

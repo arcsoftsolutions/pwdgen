@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../domain/password_constants.dart';
 import '../extensions/string_extensions.dart';
+import '../l10n/app_localizations.dart';
 import '../services/service_locator.dart';
 import '../shared/bottom_navigation_page.dart';
 import '../shared/control_container.dart';
