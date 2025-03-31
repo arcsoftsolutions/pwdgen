@@ -1,3 +1,5 @@
+import 'package:synchronized/synchronized.dart';
+
 import '../domain/password_model.dart';
 import '../domain/password_repository.dart';
 import 'history_view.dart';
@@ -8,6 +10,7 @@ class HistoryPresenter {
   HistoryPresenter(this._repository);
 
   final PasswordRepository _repository;
+  final Lock _lock = Lock();
   late HistoryView _view;
   late HistoryViewModel _viewModel;
 
@@ -40,12 +43,14 @@ class HistoryPresenter {
   }
 
   Future<bool> removePassword(PasswordViewModel password) async {
-    if (!password.removed) {
-      password.removed = true;
-      await _repository.remove(password.model);
-      await load();
-      return true;
-    }
-    return false;
+    return _lock.synchronized(() async {
+      if (!password.removed) {
+        password.removed = true;
+        await _repository.remove(password.model);
+        await load();
+        return true;
+      }
+      return false;
+    });
   }
 }
