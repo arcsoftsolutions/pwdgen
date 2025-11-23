@@ -1,7 +1,7 @@
 name: pwdgen
 description: 'Password generator.'
 publish_to: 'none'
-version: 0.0.4+5
+version: 0.0.5+6
 
 environment:
   sdk: '>=3.7.2 <4.0.0'
