@@ -1,17 +1,18 @@
 {
-    "cSpell.words": [
-        "bools",
-        "combinators",
-        "cupertino",
-        "initializers",
-        "interps",
-        "ints",
-        "mocktail",
-        "protoc",
-        "pubspec",
-        "pwdgen",
-        "tearoffs",
-        "typedef",
-        "unawaited"
-    ]
+  "cSpell.words": [
+    "bools",
+    "combinators",
+    "cupertino",
+    "initializers",
+    "interps",
+    "ints",
+    "mocktail",
+    "protoc",
+    "pubspec",
+    "pwdgen",
+    "tearoffs",
+    "typedef",
+    "unawaited"
+  ],
+  "dart.flutterSdkPath": ".fvm/versions/3.38.3"
 }
